@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Evening Journal</title>
+</head>
+<body>
+    <h1>Evening Journal</h1>
+    <a href="/"> Home </a>
+    <form method="POST">
+        <label>Date:</label><br>
+        <input type="date" name="date" required><br><br>
+
+        <label>Questions:</label><br>
+        <textarea name="questions" required></textarea><br><br>
+
+        <label>Answers:</label><br>
+        <textarea name="answers" required></textarea><br><br>
+
+        <label>Mood Score (1-10):</label><br>
+        <input type="number" name="mood_score" min="1" max="10" required><br><br>
+
+        <label>Reflection:</label><br>
+        <textarea name="reflection" required></textarea><br><br>
+
+        <label>Today's Goals Completed:</label><br>
+        <textarea name="todays_goals_completed" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

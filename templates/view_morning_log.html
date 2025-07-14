@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Morning Log</title>
+</head>
+<body>
+    <h1>Morning Log Entries</h1>
+    <a href="/morning_log">➕ Add New Entry</a> | <a href="/">🏠 Home</a><br><br>
+    {% for entry in entries %}
+        <div style="border: 1px solid #ccc; margin-bottom: 15px; padding: 10px;">
+            <strong>Date:</strong> {{ entry['date'] }}<br>
+            Walk: {{ entry['walk'] }} |
+            Vitamins: {{ entry['vitamins'] }} |
+            Meditation: {{ entry['meditation'] }} |
+            Reading: {{ entry['reading'] }} |
+            Japanese: {{ entry['japanese'] }} |
+            Coffee: {{ entry['coffee'] }} |
+            Start Work: {{ entry['starting_work'] }}
+        </div>
+    {% endfor %}
+</body>
+</html>
