@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Morning Log</title>
+</head>
+<body>
+    <h1>Morning Log</h1>
+    <a href="/"> Home </a>
+    <form method="POST">
+        <label>Date:</label><br>
+        <input type="date" name="date" required><br><br>
+
+        {% for field in ['walk', 'vitamins', 'meditation', 'reading', 'japanese', 'coffee', 'starting_work'] %}
+            <label>{{ field.replace('_', ' ').title() }} (0 = No, 1 = Yes):</label><br>
+            <input type="number" name="{{ field }}" min="0" max="1" required><br><br>
+        {% endfor %}
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

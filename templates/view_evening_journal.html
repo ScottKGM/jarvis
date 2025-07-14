@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Evening Journal</title>
+</head>
+<body>
+    <h1>Evening Journal Entries</h1>
+    <a href="/evening_journal">➕ Add New Entry</a> | <a href="/">🏠 Home</a><br><br>
+    {% for entry in entries %}
+        <div style="border: 1px solid #ccc; margin-bottom: 15px; padding: 10px;">
+            <strong>Date:</strong> {{ entry['date'] }}<br>
+            <strong>Mood Score:</strong> {{ entry['mood_score'] }}<br>
+            <strong>Reflection:</strong> {{ entry['reflection'] }}<br>
+            <strong>Goals Completed:</strong> {{ entry['todays_goals_completed'] }}<br>
+        </div>
+    {% endfor %}
+</body>
+</html>
